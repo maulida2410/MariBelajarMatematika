@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    *{
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-image: url(logo.png);
+    background-repeat:round;
+    background-size: 100% 100%;
+    background-attachment:fixed;
+    background-position: center;
+}
+
+.sidebar {
+    position:absolute;
+    left:-240px;
+    height: 680%;
+    width: 220px;
+    background-color:darkcyan;
+    transition: all .5s ease;
+    
+}
+.sidebar header{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    user-select: none;
+    background-color:darkslategrey;
+}
+
+.sidebar ul a {
+    display: block;
+    left: -250px;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing:border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    transition: .4s;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid white;
+}
+ul li:hover a {
+    padding-left: 50px;
+    
+}
+.sidebar ul a i {
+    margin-right: 16px;
+    
+}
+.sidebar ul li a:hover {
+    background-color:aqua;
+    color: black;
+    border-left-color: aquamarine;
+    transition: all .5s ease;
+    
+}
+
+.sidebar ul ul {
+    display: block;
+}
+
+.sidebar ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+}
+.sidebar ul ul li a {
+    font-size: 17px;
+    color: white;
+    padding-left: 80px;
+}
+#check {
+    display: none;
+}
+label #btn, label #cancel {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  font-size: 27px;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+  margin: 5px 30px;
+  border: 5px solid grey;
+  border-radius: 5px;
+  background-color: grey;
+  transition: all .5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+.content {
+display: block;
+margin: 20px auto;
+margin-top: -17px;
+padding-left: 50px;
+
+}
+
+p {
+font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+text-indent: 25px; text-align: justify;
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <title>Sistem Koordinat-Mari Belajar Matematika</title>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>   
+
+   <body>
+     <input type="checkbox" id="check">
+     <label for="check">
+       <i class="fas fa-bars" id="btn"></i>
+       <i class="fas fa-times" id="cancel"></i>
+
+     </label>
+       <div class="sidebar">
+                  <header>MARI BELAJAR MATEMATIKA</header>
+                  <ul>
+                    <li class="active">
+                      <a href="home.html"><i class='fas fa-home'>HOME</i></a></li>                
+                      <li>
+                        <a href="#"><i class='fas fa-book-open'>SISTEM KOORDINAT</i></a>
+                        <ul>
+                         <li><a href="materi.html"><i class='fas fa-book-reader'>Materi</i></a></li>
+                         <li><a href="video.html"><i class='fas fa-chalkboard-teacher'>Video</i></a></li>
+                        </ul> 
+                      </li>
+                    <li>
+                      <a href="#"><i class='fas fa-book-reader'>APPLICATION</i></a>
+                      <ul>
+                          <li><a href="latihan.html"><i class='far fa-sticky-note'>Latihan</i></a></li>
+                          <li><a href="evaluasi.html"><i class='far fa-clipboard'>Evaluasi</i></a></li>
+                          <li><a href="aplikasi.html"><i class='far fa-file-alt'>Aplikasi</i></a></li>
+                        </ul>
+                      </li>
+                    <li>
+                      <a href="profile.html"><i class='fas fa-user-circle'>PROFILE</i></a></li>
+                  </ul>
+    </div>
+   </body>  
+  
+    
+  
+
+
+</html>
